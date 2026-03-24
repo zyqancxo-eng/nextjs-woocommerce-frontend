@@ -2,42 +2,42 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // Output standalone build for Docker deployment
-  output: 'standalone',
+  output: "standalone",
 
   // Enable image optimization for WordPress images
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**.wp.com',
+        protocol: "https",
+        hostname: "**.wp.com",
       },
       {
-        protocol: 'https',
-        hostname: '**.wordpress.com',
+        protocol: "https",
+        hostname: "**.wordpress.com",
       },
       {
         // Your WordPress CMS domain
-        protocol: 'https',
-        hostname: 'cms.msrbuilds.com',
+        protocol: "https",
+        hostname: "petsva.com",
       },
       {
         // Wildcard for msrbuilds subdomains
-        protocol: 'https',
-        hostname: '**.msrbuilds.com',
+        protocol: "https",
+        hostname: "**.msrbuilds.com",
       },
       {
         // ZipWP staging domains
-        protocol: 'https',
-        hostname: '**.zipwp.top',
+        protocol: "https",
+        hostname: "**.zipwp.top",
       },
       {
         // For local development
-        protocol: 'http',
-        hostname: 'localhost',
+        protocol: "http",
+        hostname: "localhost",
       },
     ],
     // Image formats to use
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
   },
 
   // Environment variables validation
@@ -54,7 +54,7 @@ const nextConfig: NextConfig = {
   experimental: {
     // Enable server actions
     serverActions: {
-      bodySizeLimit: '2mb',
+      bodySizeLimit: "2mb",
     },
   },
 };
